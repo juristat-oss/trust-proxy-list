@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-param-reassign": "off",
+    "no-plusplus": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".coffee"]
+      }
+    }
+  }
+}

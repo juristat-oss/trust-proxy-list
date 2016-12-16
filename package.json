@@ -1,0 +1,23 @@
+{
+  "name": "trust-proxy-list",
+  "version": "1.0.0",
+  "description": "Build a list of trusted proxies, including AWS IP ranges, easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "keywords": [
+    "trust",
+    "proxy"
+  ],
+  "author": "Ben Chociej <ben.chociej@juristat.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-ip-ranges": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
