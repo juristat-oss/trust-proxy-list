@@ -9,6 +9,8 @@ module.exports = (inputOptions = {}) => {
     ipv6: true,
   }, inputOptions);
 
+  opts.ranges = opts.ranges || [];
+
   if (typeof opts.ranges === 'string') {
     opts.ranges = opts.ranges.split(/\s*,\s*/);
   }
@@ -29,9 +31,8 @@ module.exports = (inputOptions = {}) => {
   const result = [].concat(opts.ranges);
 
   if (opts.awsRanges) {
-    return awsIpRanges(opts.awsRanges).then((awsRanges) => {
-      result.concat(awsRanges).filter(ipVersionOk);
-    });
+    return awsIpRanges(opts.awsRanges)
+      .then(awsRanges => result.concat(awsRanges).filter(ipVersionOk));
   }
 
   return result.filter(ipVersionOk);
