@@ -2,6 +2,7 @@
   "name": "trust-proxy-list",
   "version": "1.0.1",
   "description": "Build a list of trusted proxies, including AWS IP ranges, easily",
+  "repository": "juristat-oss/trust-proxy-list",
   "main": "index.js",
   "scripts": {
     "test": "eslint ."
